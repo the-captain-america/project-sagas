@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+$quantas-maroon: #e21d26;
+$quantas-blue: #77ced8;
+
+$kuler-primary: $quantas-maroon;
+$kuler-secondary: $quantas-blue;
+
+$kuler-shade-light: #96989A;
+$kuler-shade-dark: #333333;
+
+$kuler-background: #e9f0f5;
+$kuler-font: #96989A;
+$kuler-shade-light: #96989A;
+$kuler-shade-dark: #333333;
+$kuler-font-family: 'Roboto', sans-serif;
+
+$theme-border-light: 1px solid $kuler-shade-light;
+$theme-border: 1px solid $kuler-shade-light;
+
+/* Media Query */
+
+$XSM : 320px;
+$XS : 320px;
+$S : 480px;
+$SM : 480px;
+$M : 768px;
+$L : 1170px;
+
+@mixin MQ($canvas) {
+    @if $canvas==XS {
+        @media only screen and (min-width: $XS) {
+            @content;
+        }
+    }
+    @if $canvas==XSM {
+        @media only screen and (max-width: $XS) {
+            @content;
+        }
+    }
+    @if $canvas==S {
+        @media only screen and (min-width: $S) {
+            @content;
+        }
+    }
+    @if $canvas==SM {
+        @media only screen and (max-width: $SM) {
+            @content;
+        }
+    }
+    @else if $canvas==M {
+        @media only screen and (min-width: $M) {
+            @content;
+        }
+    }
+    @else if $canvas==L {
+        @media only screen and (min-width: $L) {
+            @content;
+        }
+    }
+}
+
+@mixin transition-time($time,
+$effect) {
+    transition: all $time $effect;
+    -webkit-transition: all $time $effect;
+    -moz-transition: all $time $effect;
+    -o-transition: all $time $effect;
+    -ms-transition: all $time $effect;
+}
+
+.ease {
+    @include transition-time(300ms,
+    ease-in-out);
+}
+
+.shadow-button {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+}
+
+.shadow-drop {
+    -webkit-box-shadow: 2px 3px 11px 1px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 2px 3px 11px 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 2px 3px 11px 1px rgba(0, 0, 0, 0.08);
+}

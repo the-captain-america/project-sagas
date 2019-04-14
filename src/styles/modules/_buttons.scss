@@ -1,0 +1,57 @@
+button.button__raised {
+    &.light {
+        background: $kuler-primary;
+        float: right;
+        &:hover {
+            background: rgba($kuler-primary, .4);
+        }
+    }
+    &.dark {
+        color: white;
+        float: left;
+        background: $kuler-shade-light;
+        &:hover {
+            background: rgba($kuler-shade-light, .4);
+        }
+    }
+}
+
+.btn-submit {
+    color: white;
+    float: right;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    border-bottom: 3px solid $kuler-dark;
+    background-color: $kuler-light !important;
+    &.input {
+        padding: 11px 15px 11px;
+        border-radius: 3px;
+        border-bottom: 3px solid $kuler-dark;
+        &:hover {
+            background: $kuler-dark;
+        }
+        .fa {
+            position: relative;
+            top: 3px;
+        }
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+button.menu {
+    position: absolute;
+    border: 0px;
+    .fa {
+        color: white;
+    }
+    &:focus {
+        border: none;
+    }
+    right:20px;
+    top:10px;
+    font-size:20px;
+    background:$kuler-shade-dark;
+}

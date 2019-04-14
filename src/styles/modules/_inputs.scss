@@ -1,0 +1,127 @@
+// extend
+.input__transition {
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    transition: border 0.3s;
+}
+
+
+/* lists */
+
+ul.input__list {
+    list-style: none;
+    padding: 0px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+ul.input__list li {
+    display: block;
+    padding: 0 10px;
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+}
+
+@media all and (max-width: 800px) {
+    ul.input__list {
+        margin: 0 auto;
+        width: 100%;
+    }
+    ul.input__list li {
+        padding: 0;
+        width: 100%;
+        float: none;
+        margin-bottom: 10px;
+    }
+}
+
+ul.input__list {
+    .style-4 textarea[type="text"] {
+        &:focus {
+            outline: none;
+        }
+        padding: 10px;
+        border: none;
+        border-bottom: $theme-border-light;
+        @extend .input__transition;
+    }
+}
+
+input[type="text"] {
+    &:-moz-placeholder,
+    -webkit-input-placeholder {
+        color: #999;
+    }
+    &:focus {
+        outline: none;
+    }
+    width:100%;
+    padding: 10px;
+    border: none;
+    border-bottom: $theme-border-light;
+    @extend .input__transition;
+    &::-webkit-input-placeholder {
+        color: #999;
+    }
+}
+
+.style-4 {
+    textarea[type="text"] {
+      &:focus {
+        outline: none;
+      }
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-bottom: $theme-border-light;
+    }
+    textarea[type="text"]:focus {
+        border-bottom: $theme-border-light;
+    }
+}
+
+ul.input__list {
+    .style-4 textarea[type="text"]:focus,
+    ul.input__list textarea[type="text"]:focus {
+        border-bottom: $theme-border-light;
+    }
+}
+
+ul.input__list {
+    .style-4 input[type="text"]:focus,
+    ul.input__list input[type="text"].focus {
+        border-bottom: $theme-border-light;
+    }
+}
+
+ul.input__list {
+    .style-4 input[disabled] {
+        border-bottom: 2px solid #cccccc;
+        background-color: #cccccc;
+    }
+}
+
+ul.input__list {
+    .style-4 input[type="password"] {
+        padding: 10px;
+        border: none;
+        border-bottom: 2px solid $kuler-dark;
+        @extend .input__transition;
+    }
+}
+
+.style-4 textarea[type="password"] {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid $kuler-dark;
+    @extend .input__transition;
+}
+
+ul.input__list {
+    input[type="text"] {
+        &:focus {
+            border-bottom: $theme-border-light;
+        }
+    }
+}

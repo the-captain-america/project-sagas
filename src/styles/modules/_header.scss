@@ -1,0 +1,16 @@
+header {
+  background: $kuler-shade-dark;
+  color: #fff;
+  padding: 1em;
+  width: 100%;
+  position: absolute;
+  height: 50px;
+  left: 0px;
+  top: 0px;
+  z-index: 999;
+  text-align: center;
+  border-bottom: 2px solid $kuler-shade-light;
+  >.title {
+      font-size: 120%;
+  }
+}

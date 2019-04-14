@@ -1,0 +1,24 @@
+{
+  "presets": [
+    "env",
+    "react",
+    ["es2015", { "modules": false }],
+    "flow"
+  ],
+  "plugins": [
+    "transform-runtime",
+    ["module-resolver", {
+      "root": ["./src/js"],
+      "alias": {
+        "actions": "./actions",
+        "components": "./components",
+        "containers": "./containers",
+        "reducers": "./reducers",
+        "sagas": "./sagas",
+        "services": "./services",
+        "types": "./types",
+        "images": "./public/images"
+      }
+    }]
+  ]
+}

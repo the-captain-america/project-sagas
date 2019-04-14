@@ -1,0 +1,23 @@
+.error {
+  margin-top: 5px;
+  padding: 15px;
+  width: 100%;
+  border-radius: 4px;
+  background:#f04c3e;
+  text-align: center;
+  color: white;
+  float: left;
+  display: block;
+  line-height: 15px;
+  position: relative;
+    .fa{
+        color:white;
+    }
+  span {
+      float: right;
+      cursor: pointer;
+      .fa {
+          color: white;
+      }
+  }
+}
